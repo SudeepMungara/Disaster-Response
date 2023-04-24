@@ -36,6 +36,7 @@ def clean_data(df):
         categories[column] = categories[column].apply(lambda x: x.split('-')[1])
         # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])
+        categories[column] = np.where(categories[column] == 0, 0, 1)
     df.drop('categories',axis = 1,inplace = True)
     df = df.join(categories)
     df.drop_duplicates(inplace = True)
@@ -50,7 +51,7 @@ def save_data(df, database_filename):
     '''  
     
     engine = create_engine('sqlite:///'+database_filename)
-    df.to_sql('DisasterResponse', engine, index=False)
+    df.to_sql('DisasterResponse', engine, index=False, if_exists='append')
 
 def main():
     if len(sys.argv) == 4:
