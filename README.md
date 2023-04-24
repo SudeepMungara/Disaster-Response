@@ -4,22 +4,25 @@
 
 In this project I've built a disaster response pipeline using data engineering skill on Appen dataset and a classification model using Flask API to classify disaster messages.
 
-2. File Structure 
-      - app<br>
-      | - template <br>
-      | |- master.html  # main page of web app <br>
-      | |- go.html  # classification result page of web app <br>
-      |- run.py  # Flask file that runs app<br>
+2.File Structure
 
-      - data <br>
-      |- disaster_categories.csv  # data to process <br>
-      |- disaster_messages.csv  # data to process<br>
-      |- process_data.py #ETL script to transform the data <br> 
-      |- DisasterResponse.db   # database to save clean data to <br>
+      - app
+            - template
+               - master.html  #main page of web app
+               - go.html  #classification result page of web app
+            - run.py  #Flask file that runs app
 
-      - models <br>
-      |- train_classifier.py #Training script to classify disaster messages <br>
-      |- classifier.pkl  # saved model <br>
+      - data
+      
+            - disaster_categories.csv  #data to process
+            - disaster_messages.csv  #data to process
+            - process_data.py #ETL script to transform the data 
+            - DisasterResponse.db   #database to save clean data
+
+      - models
+      
+            - train_classifier.py #Training script to classify disaster messages
+            - classifier.pkl  #saved model
 
 
 3.Instructions on running this project <br>
