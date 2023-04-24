@@ -91,7 +91,12 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 
 def save_model(model, model_filepath):
-    
+    '''
+        Save model to specified path
+        Args:
+            model: model
+            model_filepath: File path to dump pickle file
+    '''
     pickle.dump(model, open(model_filepath, 'wb'))
 
 
